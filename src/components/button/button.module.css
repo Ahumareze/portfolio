@@ -1,0 +1,21 @@
+.button{
+    height: 40px;
+    width: 150px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #0C1E37;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover{
+    animation: resize 0.5s ease forwards;
+}
+@keyframes resize {
+    100%{
+        background-color: #0f2544;
+    }
+}

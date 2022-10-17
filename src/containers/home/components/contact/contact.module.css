@@ -1,0 +1,23 @@
+.container{
+    height: fit-content;
+    width: 600px;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container .main .title{
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: var(--primary);
+}
+.details{
+    font-size: 16px;
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.main div{
+    display: grid;
+    justify-content: center;
+}

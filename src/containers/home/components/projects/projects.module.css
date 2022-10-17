@@ -1,0 +1,212 @@
+.container{
+    width: 100vw;
+    height: fit-content;
+    padding-bottom: 100px;
+}
+.container .polygon{
+    height: 400px;
+    position: relative;
+    left: -100px;
+    animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.container .main{
+    width: 900px;
+    position: relative;
+    top: -350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: -350px;
+}
+.container .main .title{
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+    color: var(--primary);
+}
+.mainContainer{
+    width: 100%;
+    padding-top: 40px;
+    gap: 40px;
+    display: grid;
+}
+.itemContainer, .itemContainerLeft{
+    height: fit-content;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+.item{
+    height: 350px;
+    width: 700px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    background: url('../../../../assets//projects/future_bank.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cover, .cover2{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(10, 25, 47, 0.6);
+    backdrop-filter: blur(5px);
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 10px;
+}
+.cover{
+    grid-template-columns: 1.5fr 1fr;
+}
+.cover2{
+    grid-template-columns: 1fr 1.5fr;
+}
+.details, .details2{
+    height: fit-content;
+    width: 100%;
+    border-radius: 7px;
+    background-color: var(--tools);
+    box-sizing: border-box;
+    padding: 15px 15px;
+    position: relative;
+}
+.details{
+    left: -100px;
+}
+.details2{
+    right: -100px;
+}
+.projectName{
+    font-size: 20px;
+    color: var(--primary);
+    margin: 0;
+    font-family: var(--poppins);
+}
+.projectDetails{
+    font-size: 15px;
+    color: var(--secondary);
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+.links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 22px;
+}
+.link{
+    color: var(--primary);
+    cursor: pointer;
+    padding: 10px;
+}
+.link:hover{
+    animation: link 0.5s ease forwards;
+}
+@keyframes link {
+    100%{
+        color: #fff;
+        transform: translateY(-3px);
+    }
+}
+.mainImage, .activeImage, .deactiveImage{
+    height: 100%;
+    width: calc(100% + 100px);
+    position: relative;
+    left: -100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.mainImage2, .activeImage2, .deactiveImage2{
+    height: 100%;
+    width: calc(100% + 100px);
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.mainImage img, .activeImage img, .deactiveImage img, .mainImage2 img, .activeImage2 img, .deactiveImage2 img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 7px;
+}
+.activeImage img{
+    animation: scaleImage 0.9s ease forwards;
+    z-index: 100;
+}
+@keyframes scaleImage {
+    100%{
+        transform: translateX(50px) translateY(-50px) scale(1.1);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+}
+.activeImage2 img{
+    animation: scaleImage2 0.9s ease forwards;
+    z-index: 100;
+}
+@keyframes scaleImage2 {
+    100%{
+        transform: translateX(-50px) translateY(-50px) scale(1.1);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+}
+.deactiveImage img{
+    animation: unScaleImage 0.3s ease forwards;
+}
+@keyframes unScaleImage {
+    0%{
+        transform: translateX(50px) translateY(-50px) scale(1.1);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px) scale(1);
+        box-shadow: none;
+    }
+}
+.deactiveImage2 img{
+    animation: unScaleImage2 0.3s ease forwards;
+}
+@keyframes unScaleImage2 {
+    0%{
+        transform: translateX(-50px) translateY(-50px) scale(1.1);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px) scale(1);
+        box-shadow: none;
+    }
+}
+.itemContainer .languagesContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 50px;
+}
+.language{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.language div{
+    height: 7px;
+    width: 7px;
+    border-radius: 5px;
+    background-color: var(--primary);
+}
+.language p{
+    margin: 0;
+    font-size: 15px;
+    color: var(--secondary);
+}

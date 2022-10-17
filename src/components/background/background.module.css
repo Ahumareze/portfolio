@@ -1,0 +1,41 @@
+.container{
+    width: 100vw;
+}
+.section{
+    min-height: calc(100vh - 70px);
+    width: 100vw;
+    overflow-x: hidden;
+}
+.links{
+    height: fit-content;
+    width: 120px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    justify-content: center;
+    /* gap: 30px; */
+}
+.item{
+    color: var(--secondary);
+    cursor: pointer;
+    padding: 20px;
+    /* background-color: red; */
+}
+.item:hover{
+    animation: hover 0.5s ease forwards;
+}
+@keyframes hover {
+    100%{
+        transform: translateY(-5px);
+        color: var(--primary);
+    }
+}
+.line{
+    height: 100px;
+    width: 1px;
+    background-color: var(--secondary);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
